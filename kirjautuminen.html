@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>Kirjautuminen</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h3>Kirjautuminen</h3>
+<form action="kayttajatunnistus.php" method="post" class="form">
+Käyttäjätunnus: <input type="text" name="kayttaja_tunnus" class="KirjKysely"><br>
+Salasana: <input type="password" name="kayttaja_salasana" class="KirjKysely"><br>
+<input type="hidden" name="lomaketunnistin" value="1">
+<input type="submit" value="Kirjaudu" class="KirjKysely">
+</form>
+<br><p class="teksti">Etkö ole vielä rekisteröitynyt? <a href="rekisterointi.html">Rekisteröidy käyttäjäksi tästä</a>.</p>
+</body>
+</html>

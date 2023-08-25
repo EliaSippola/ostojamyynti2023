@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>Rekisteröinti</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h3>Rekisteröinti</h3>
+<form action="kayttajatunnistus.php" method="post" class="form">
+Käyttäjätunnus: <input name="kayttaja_tunnus" type="text" class="RekKysely"><br>
+Salasana: <input name="kayttaja_salasana" type="password" class="RekKysely"><br>
+Sähköpostiosoite: <input name="kayttaja_sahkoposti" type="text" class="RekKysely"><br>
+<input type="hidden" name="lomaketunnistin" value="0">
+Kirjoita numero 6 kenttään kirjaimin: <input name="varmistus" type="text" class="RekKysely"><br>
+<input type="submit" value="Rekisteröidy" class="RekKysely">
+</form>
+<p><a href="kirjautuminen.html" class="teksti">Mikäli sinulla on jo tunnukset, siirry kirjautumaan palveluun tästä</a></p>
+</body>
+</html>
