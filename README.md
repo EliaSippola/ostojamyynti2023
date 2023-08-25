@@ -1,6 +1,5 @@
 # ostojamyynti2023
-School project
-
+School project \n
 last edit: 25.8.2023
 
 time took: 2 weeks (or 1.5 weeks)
