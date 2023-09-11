@@ -1,9 +1,14 @@
 # ostojamyynti2023
-School project
+Koulutyö
 
-last edit: 28.8.2023
+viimeksi muokattu: 11.9.2023
 
-time took: 2 weeks (or 1.5 weeks)
+ajanjakso: 2-3 viikkoa
 
+ensimmäinen verkkosivusto.\
+Yksinkertainen sivusto SQL tietokannan avulla. Toimintoina käyttäjän luominen, kirjautuminen, tietojen muutto, ilmoitusten luominen, tietojen muuttaminen, poistaminen nettisivun avulla.
 
-A website with few functions and database to store crendentials and data.
+Erittäin yksinkertainen tyyli
+
+Salasanasuojaus php:n password_hash() komennolla\
+Suojaus SQL injektioita vastaan
