@@ -9,18 +9,26 @@ include("kantayhteys.php");
 header("content-type:text/html;charset=utf-8");
 date_default_timezone_set("Europe/Helsinki");
 
-#tunnukset
-$kayttaja_tunnus = mysqli_real_escape_string($conn, $_POST['kayttaja_tunnus']);
-$kayttaja_salasana = $_POST['kayttaja_salasana'];
 
-#alkuperäinen, sha256 ilman suolaa
-#$password_hash = hash("sha256", $kayttaja_salasana);
+#ei anna virheilmoituksia jos mennään suoraan sivulle
+if (isset($_POST["lomaketunnistin"])) {
+    #tunnukset
+    $kayttaja_tunnus = mysqli_real_escape_string($conn, $_POST['kayttaja_tunnus']);
+    $kayttaja_salasana = $_POST['kayttaja_salasana'];
 
-#md5
-#$password_hash = md5($kayttaja_salasana);
+    #alkuperäinen, sha256 ilman suolaa
+    #$password_hash = hash("sha256", $kayttaja_salasana);
 
-#with salt
-$password_hash = password_hash($kayttaja_salasana, PASSWORD_DEFAULT);
+    #md5
+    #$password_hash = md5($kayttaja_salasana);
+
+    #with salt
+    $password_hash = password_hash($kayttaja_salasana, PASSWORD_DEFAULT);
+
+    #mikä sivu kyseessä
+    $sivu = $_POST['lomaketunnistin'];
+}
+
 
 #funktio sähköpostin vaihtoon
 #saaOllaSama tarkistaa saako sähköposti olla sama kuin alkuperäinen
@@ -73,14 +81,10 @@ function vaihdaSahkoposti(bool $saaOllaSama) {
     return True;
 }
 
-#mikä sivu kyseessä
-$sivu = $_POST['lomaketunnistin'];
-
-
 // SIVUJEN LOMAKKEET
 
 #Rekisteröinti
-if ($sivu == 0) {
+if (isset($sivu) && $sivu == 0) {
     $kayttaja_sahkoposti = mysqli_real_escape_string($conn, $_POST['kayttaja_sahkoposti']);
     $varmistus = mysqli_real_escape_string($conn, $_POST['varmistus']);
     
@@ -130,7 +134,7 @@ if ($sivu == 0) {
     }
 
 #kirjautuminen
-} elseif ($sivu == 1) {
+} elseif (isset($sivu) && $sivu == 1) {
     #alkuperäinen
     #$kayttaja = mysqli_query($conn, "SELECT * FROM kayttajat WHERE kayttaja_tunnus ='$kayttaja_tunnus' AND kayttaja_salasana = '$password_hash'");
 
@@ -172,7 +176,7 @@ if ($sivu == 0) {
     }
 
 #käyttäjätietojen muuttaminen
-} elseif ($sivu == 2 && isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] = 1) {
+} elseif (isset($sivu) && $sivu == 2 && isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] = 1) {
     #salasanat
     $kayttaja_uusisalasana = $_POST['kayttaja_uusisalasana'];
     $kayttaja_salasanauudelleen = $_POST['kayttaja_salasanauudelleen'];

@@ -2,7 +2,7 @@
 session_start();
 include("kantayhteys.php");
 ?>
-<html><head><link rel="stylesheet" href="styles.css"><head><html>
+<html><head><link rel="stylesheet" href="styles.css"><title>Osto- ja myyntikanava</title><link rel="icon" type="image/x-icon" href="/favicon.png"><head><html>
 <?php
 #virheilmoitukset
 /*
@@ -95,5 +95,8 @@ while ($i < $num) {
 
     $i++;
 }
+
+echo("<br><small><i><a target='_blank' href='https://icons8.com/icon/mkkp6yt38FVq/old-vmware-logo'>Logo</a> icon by <a target='_blank' href='https://icons8.com'>Icons8</a></i></small>");
+
 mysqli_close($conn);
 ?>
