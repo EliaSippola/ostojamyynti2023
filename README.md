@@ -13,3 +13,6 @@ Erittäin yksinkertainen tyyli
 
 Salasanasuojaus php:n password_hash() komennolla\
 Suojaus SQL injektioita vastaan
+
+## asennus
+Nettisivun ja tietokannan hostaamiseen käytetty XAMPP -ympäristöä. XAMPP -ympäristö on ilmainen ohjelma, joka mahdollistaa tietokantojen ja nettisivujen käytön 
