@@ -10,4 +10,3 @@ Projektiin kuuluu yksinkertainen nettisivu, johon kuuluu tietokanta. Nettisivull
 
 ## asennus
 Nettisivun ja tietokannan hostaamiseen käytetty XAMPP -ympäristöä (verkkosivu ja asennus: [www.apachefriends.org/](https://www.apachefriends.org/))
-
