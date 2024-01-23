@@ -16,15 +16,15 @@ if (isset($ilmoitus_id)) {
     #$query = mysqli_query($conn, "SELECT * FROM ilmoitukset WHERE ilmoitus_id = '$ilmoitus_id'");
     
     #for sql injection
-    $sql = "SELECT * FROM ilmoitukset WHERE ilmoitus_id = ?";
+    $sql = "SELECT * FROM ilmoitukset WHERE ilmoitukset_id = ?";
     $param = [$ilmoitus_id];
     $query = mysqli_execute_query($conn, $sql, $param);
 
     $row = mysqli_fetch_assoc($query);
 
-    $ilmoitus_nimi = $row['ilmoitus_nimi'];
-    $ilmoitus_kuvaus = $row['ilmoitus_kuvaus'];
-    $ilmoitus_laji = $row['ilmoitus_laji'];
+    $ilmoitus_nimi = $row['ilmoitukset_nimi'];
+    $ilmoitus_kuvaus = $row['ilmoitukset_kuvaus'];
+    $ilmoitus_laji = $row['ilmoitukset_laji'];
 
     if ($ilmoitus_laji == 1) {
         $ilmoitus_laji = "Myydään";

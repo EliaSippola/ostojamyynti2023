@@ -23,7 +23,7 @@ if ($sivu == 1 && isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] == 1) {
         #$query = mysqli_query($conn, "INSERT INTO ilmoitukset (ilmoitus_laji, ilmoitus_nimi, ilmoitus_kuvaus, ilmoitus_paivays, myyja_id) VALUES ('$ilmoitus_laji', '$ilmoitus_nimi', '$ilmoitus_kuvaus', '$ilmoitus_paivays', '$myyja_id')");
         
         #for sql injection
-        $sql = "INSERT INTO ilmoitukset (ilmoitus_laji, ilmoitus_nimi, ilmoitus_kuvaus, ilmoitus_paivays, myyja_id) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO ilmoitukset (ilmoitukset_laji, ilmoitukset_nimi, ilmoitukset_kuvaus, ilmoitukset_paivays, myyja_id) VALUES (?, ?, ?, ?, ?)";
         $param = [$ilmoitus_laji, $ilmoitus_nimi, $ilmoitus_kuvaus, $ilmoitus_paivays, $myyja_id];
         mysqli_execute_query($conn, $sql, $param);
 
@@ -52,7 +52,7 @@ if ($sivu == 1 && isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] == 1) {
 
         #for sql injection
         #vain nimi ja kuvaus tarvitsisi asettaa erikseen koska muut on asetettu automaattisesti. Koodi kuitenkin näyttää siistimmältä näin.
-        $sql = "UPDATE ilmoitukset SET ilmoitus_laji = ?, ilmoitus_nimi = ?, ilmoitus_kuvaus = ? WHERE ilmoitus_id = ?";
+        $sql = "UPDATE ilmoitukset SET ilmoitukset_laji = ?, ilmoitukset_nimi = ?, ilmoitukset_kuvaus = ? WHERE ilmoitukset_id = ?";
         $param = [$ilmoitus_uusilaji, $ilmoitus_uusinimi, $ilmoitus_uusikuvaus, $ilmoitus_id];
         mysqli_execute_query($conn, $sql, $param);
 

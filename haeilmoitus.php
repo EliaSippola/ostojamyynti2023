@@ -23,7 +23,7 @@ if (isset($_POST['submit']) && !empty($haku)) {
     #WHERE ilmoitus_kuvaus LIKE '%" . $haku . "%' OR ilmoitus_nimi LIKE '%" . $haku . "%'");
 
     #for sql injection
-    $sql = "SELECT * FROM ilmoitukset INNER JOIN kayttajat ON ilmoitukset.myyja_id = kayttajat.kayttaja_id WHERE ilmoitus_kuvaus LIKE ? OR ilmoitus_nimi LIKE ?";
+    $sql = "SELECT * FROM ilmoitukset INNER JOIN kayttajat ON ilmoitukset.myyja_id = kayttajat.kayttaja_id WHERE ilmoitukset_kuvaus LIKE ? OR ilmoitukset_nimi LIKE ?";
     $param = ["%$haku%", "%$haku%"];
     $result = mysqli_execute_query($conn, $sql, $param);
 
@@ -40,8 +40,8 @@ if (isset($_POST['submit']) && !empty($haku)) {
     while ($i < $num) {
         $row = mysqli_fetch_assoc($result);
 
-        $ilmoitus_id = $row['ilmoitus_id'];
-        $ilmoitus_laji = $row['ilmoitus_laji'];
+        $ilmoitus_id = $row['ilmoitukset_id'];
+        $ilmoitus_laji = $row['ilmoitukset_laji'];
         
         if ($ilmoitus_laji === false) {
             echo mysqli_error($conn);
@@ -56,9 +56,9 @@ if (isset($_POST['submit']) && !empty($haku)) {
         }
 
         #ilmoitusten tiedot
-        $ilmoitus_nimi = $row['ilmoitus_nimi'];
-        $ilmoitus_kuvaus = $row['ilmoitus_kuvaus'];
-        $ilmoitus_paivays = $row['ilmoitus_paivays'];
+        $ilmoitus_nimi = $row['ilmoitukset_nimi'];
+        $ilmoitus_kuvaus = $row['ilmoitukset_kuvaus'];
+        $ilmoitus_paivays = $row['ilmoitukset_paivays'];
 
         $ilmoitus_oikeapaivays = date("d-m-Y", strtotime($ilmoitus_paivays));
 

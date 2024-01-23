@@ -14,7 +14,7 @@ $ilmoitus_id = mysqli_real_escape_string($conn, $_POST['ilmoitus_id']);
 #onko poisto varmistettu, onko kirjauduttu sisään
 if (isset($poista) && $poista == 1 && isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] == 1) {
     #ie tarvetta suojaukselle, $ilmoitus_id ei ole käyttäjän muokattavissa
-    mysqli_query($conn, "DELETE FROM ilmoitukset WHERE ilmoitus_id = '$ilmoitus_id'");
+    mysqli_query($conn, "DELETE FROM ilmoitukset WHERE ilmoitukset_id = '$ilmoitus_id'");
 
     echo "Ilmoitus poistettu! <a href='index.php'>Palaa etusivulle</a>";
 } elseif (!isset($_SESSION['LOGGEDIN']) || $_SESSION['LOGGEDIN'] !== 1) {

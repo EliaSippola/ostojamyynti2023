@@ -53,8 +53,8 @@ while ($i < $num) {
     $row = mysqli_fetch_assoc($result);
 
     #ilmoituksen laji
-    $ilmoitus_id = $row['ilmoitus_id'];
-    $ilmoitus_laji = $row['ilmoitus_laji'];
+    $ilmoitus_id = $row['ilmoitukset_id'];
+    $ilmoitus_laji = $row['ilmoitukset_laji'];
 
     if ($ilmoitus_laji == false) {
         echo mysqli_error($conn);
@@ -69,9 +69,9 @@ while ($i < $num) {
     }
 
     #ilmoitukset tiedot
-    $ilmoitus_nimi = $row['ilmoitus_nimi'];
-    $ilmoitus_kuvaus = $row['ilmoitus_kuvaus'];
-    $ilmoitus_paivays = $row['ilmoitus_paivays'];
+    $ilmoitus_nimi = $row['ilmoitukset_nimi'];
+    $ilmoitus_kuvaus = $row['ilmoitukset_kuvaus'];
+    $ilmoitus_paivays = $row['ilmoitukset_paivays'];
     
     $myyja_id = $row['kayttaja_id'];
     $myyja_tunnus = $row['kayttaja_tunnus'];
@@ -95,8 +95,6 @@ while ($i < $num) {
 
     $i++;
 }
-
-echo("<br><small><i><a target='_blank' href='https://icons8.com/icon/mkkp6yt38FVq/old-vmware-logo'>Logo</a> icon by <a target='_blank' href='https://icons8.com'>Icons8</a></i></small>");
 
 mysqli_close($conn);
 ?>
