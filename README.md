@@ -11,4 +11,5 @@ Projektiin kuuluu yksinkertainen nettisivu, johon kuuluu tietokanta. Nettisivull
 ## asennus
 Nettisivun ja tietokannan hostaamiseen käytetty XAMPP -ympäristöä (verkkosivu ja asennus: [www.apachefriends.org/](https://www.apachefriends.org/))
 
-1. Asenna tietokanta nimeltä `tietokanta` tiedoston <a href="tietokanta.sql" target="_blank">tietokanta.sql</a> avulla
+1. Siirrä projekti kansioon `htdocs` `XAMPP`:in alla. (tietokantaa ei ole pakko siirtää). *Oletuskansio: `C:/xampp/htdocs`*
+2. Asenna tietokanta nimeltä `tietokanta` tiedoston <a href="tietokanta.sql" target="_blank">tietokanta.sql</a> avulla
