@@ -2,6 +2,7 @@
 $servername = "localhost";
 $username = "Console";
 $password = "ConsExclusive";
+$tietokanta = "tietokanta";
 
 $dbconnect = array($servername, $username, $password);
 
@@ -9,7 +10,7 @@ $dbconnect = array($servername, $username, $password);
 $conn = mysqli_connect($dbconnect[0], $dbconnect[1], $dbconnect[2]);
 
 #set database as tietokanta
-mysqli_select_db($conn, "tietokanta");
+mysqli_select_db($conn, $tietokanta);
 
 #set charset to utf-8
 mysqli_set_charset($conn, "utf8");
