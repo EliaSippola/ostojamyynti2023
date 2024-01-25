@@ -1,4 +1,5 @@
 <?php
+# connection details
 $servername = "localhost";
 $username = "Console";
 $password = "ConsExclusive";
