@@ -9,9 +9,11 @@ Projektiin kuuluu yksinkertainen nettisivu, johon kuuluu tietokanta. Nettisivull
 - Ilmoitusten selaaminen, tietojen näkeminen, ja hakeminen
 
 ## asennus
-Nettisivun ja tietokannan hostaamiseen käytetty XAMPP -ympäristöä (verkkosivu ja asennus: [www.apachefriends.org/](https://www.apachefriends.org/){target="_blank"})
+Nettisivun ja tietokannan hostaamiseen käytetty XAMPP -ympäristöä (verkkosivu ja asennus: [www.apachefriends.org/](https://www.apachefriends.org/))
 
 1. Siirrä projekti uuteen kansioon sijainnissa `C:/xampp/htdocs/`. Jos et löyfä kansiota `htdocs`, tarkista mihin `XAMPP` on asennettu. *tietokantaa ei ole pakko siirtää.*
-2. Luo tietokanta nimeltä `tietokanta`, ja tuo tiedoston <a href="tietokanta.sql" target="_blank">tietokanta.sql</a> tiedot tietokantaan.
+2. Luo tietokanta nimeltä `tietokanta`, ja tuo tiedoston <a href="tietokanta.sql">tietokanta.sql</a> tiedot tietokantaan.
 3. Luo käyttäjä `Console`, ja aseta sen salasanaksi `ConsExclusive`. Anna käyttäjälle `SELECT`, `INSERT`, `UPDATE` ja `DELETE` -oikeudet tietokantaan.
-4. 
+4. Aloita sivuston käyttö.
+
+***Voit muuttaa sivuston käyttämää tietokannan ja käyttäjän asetuksia tiedostossa [kantayhteys.php](kantayhteys.php)***
