@@ -1,6 +1,8 @@
 # ostojamyynti2023
 Riverian ammattikoulussa tehty projektityö. Ensimmäinen tekemäni nettisivu, joka käyttää tietokantaa. Tehty 08/2023-09/2023. Projektia ei enää muokata.
 
+Sivuston pääpainona on `html`, `php` ja `SQL` -kielien käyttäminen
+
 Sivusto on yksinkertainen, ja se on tehty koulussa annettujen ohjeiden avulla. Sivustoon kuuluu SQL-tietokanta, joka tallentaa käyttäjien tiedot, ja ilmoitukset. Sivusto on suojattu SQL-injetkioita vastaan, ja salasanat on suojattu PHP:n `password_hash()` -komennolla. Sivuston tyyli on hyvin yksinkertainen.
 
 Projektiin kuuluu yksinkertainen nettisivu, johon kuuluu tietokanta. Nettisivulla on seuraavat toiminnot:
